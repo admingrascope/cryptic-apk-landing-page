@@ -1,0 +1,96 @@
+:root{
+    --primary-grey: #F3F3F3;
+    --inactive-grey: #737373;
+    --logo-black: #030303;
+    --navbarHeight: 80px;
+}
+@font-face {
+    font-display: swap;
+    font-family: "Custom Helvetica";
+    font-style: normal;
+    font-weight: 400; /* Regular */
+    src: url("../assets/fonts/Helvetica/Helvetica.ttf") format("truetype"); /* Change format if needed */
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Custom Helvetica";
+    font-style: normal;
+    font-weight: 700; /* Bold */
+    src: url("../assets/fonts/Helvetica/Helvetica-Bold.ttf") format("truetype"); /* Change format if needed */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Custom Helvetica", sans-serif;
+    font-weight: 400;
+}
+
+.xui-navbar .brand {
+    width: 200px;
+}
+.xui-navbar .links{
+    width: calc(100% - 200px);
+}
+.xui-navbar .fixed ul li a{
+    padding: .7rem 2rem;
+    border-radius: 1rem;
+}
+.benefit{
+    background-color: var(--primary-grey);
+    transition: .3s ease;
+    color: var(--logo-black);
+}
+.benefit span{
+    background-color:#FFF;
+}
+.benefit:hover{
+    background-color: var(--logo-black);
+    color: var(--primary-grey);
+}
+.line-animate-holder {
+    height: 4px;
+    background-color: var(--primary-grey);
+    position: relative;
+    overflow: hidden;
+}
+
+.line-animate-holder .line-animate {
+    width: 314px;
+    height: 100%;
+    background-color: var(--logo-black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+.instruction {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.instruction span{
+    color: var(--inactive-grey);
+}
+@media screen and (max-width: 1024px){
+    .xui-navbar .brand{
+        width: 100px;
+    }
+    .xui-navbar .links {
+        width: calc(100% - 100px);
+    }
+    .line-animate-holder{
+        width: 4px;
+        height: 700px;
+    }
+    .line-animate-holder .line-animate{
+        height: 200px;
+    }
+    .instruction-holder{
+        width: calc(100% - 4px);
+        margin: 0;
+        padding-left: 1rem;
+    }
+}
