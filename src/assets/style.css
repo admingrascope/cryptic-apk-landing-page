@@ -35,9 +35,16 @@ body {
 .xui-navbar .links{
     width: calc(100% - 200px);
 }
+.xui-navbar .links ul li a{
+    color: var(--inactive-grey);
+}
+.xui-navbar .links ul li a.active-link{
+    color: var(--logo-black);
+}
 .xui-navbar .fixed ul li a{
     padding: .7rem 2rem;
     border-radius: 1rem;
+    color: #FFF;
 }
 .benefit{
     background-color: var(--primary-grey);
@@ -74,12 +81,85 @@ body {
 .instruction span{
     color: var(--inactive-grey);
 }
+.cryptic-purchase-form-group input,
+.cryptic-purchase-form-group select{
+    padding: 1.5rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    border: 1px solid var(--inactive-grey);
+}
+.cryptic-purchase-form-group:first-child input{
+    background-color: var(--primary-grey);
+    color: var(--inactive-grey);
+    font-weight: 600;
+}
+.cryptic-purchase-form-group:first-child input::placeholder{
+    color: var(--inactive-grey);
+}
+.cryptic-purchase-form-group input:active,
+.cryptic-purchase-form-group select:active,
+.cryptic-purchase-form-group input:focus,
+.cryptic-purchase-form-group select:focus{
+    border: 1px solid var(--logo-black);
+}
+.cryptic-footer ul li{
+    list-style: none;
+}
+.cryptic-loader-screen {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: #FFF;
+}
+.cryptic-loader-screen .cryptic-loader-holder {
+    margin-top: 16px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--inactive-grey);
+    position: relative;
+    overflow: hidden;
+}
+.cryptic-loader-screen .cryptic-loader-holder .cryptic-loader-anime {
+    width: 72px;
+    height: 100%;
+    background-color: var(--logo-black);
+    position: absolute;
+    top: 0;
+    animation-name: loader;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: .8s;
+    animation-timing-function: linear;
+}
+.xui-lg-pos-absolute{
+  position: absolute;
+}
+@keyframes loader {
+    from {
+        left: -72px;
+    }
+    to {
+        left: 200px;
+    }
+}
+
 @media screen and (max-width: 1024px){
     .xui-navbar .brand{
         width: 100px;
     }
     .xui-navbar .links {
         width: calc(100% - 100px);
+    }
+    .xui-navbar .links ul li a{
+        text-align: left !important;
+    }
+    .xui-navbar .links ul li a.active-link{
+        background-color: var(--primary-grey);
+        position: relative;
+        border-left: 5px solid var(--logo-black);
     }
     .line-animate-holder{
         width: 4px;

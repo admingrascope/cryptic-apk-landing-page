@@ -84,7 +84,7 @@ const HowItWorks = () => {
     }, [activeIndex, isMobile]); // Add isMobile as a dependency to trigger re-renders on resize
 
     return (
-        <section className="xui-container xui-py-3">
+        <section id='how-it-works' className="xui-container xui-py-3">
             <SectionComponent intro="How it Works" heading="Seamless & Secure – It’s Simple" text="Getting started with Cryptic APK is quick and effortless. Follow these simple steps to secure your private communications." />
             <div className="xui-mt-1-half xui-d-flex xui-lg-flex-dir-column">
                 <div className="line-animate-holder">

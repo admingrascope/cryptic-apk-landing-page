@@ -7,7 +7,7 @@ import GoogleMarketingPlatform from '../../assets/custom-icons/GoogleMarketingPl
 
 const About = () => {
     return (
-        <section className="xui-container xui-py-3">
+        <section id='about' className="xui-container xui-py-3">
             <SectionComponent intro='About Cryptic APK' heading='Introducing Cryptic APK' text='A secure messaging app for privacy-conscious users, using robust encryption to keep your communications confidential.' />
             <div className='xui-mt-1-half xui-d-grid xui-lg-grid-col-4 xui-grid-col-1 xui-grid-gap-1'>
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">

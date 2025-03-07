@@ -8,7 +8,7 @@ const useDynamicStyles = () => {
     function applyDynamicStyles() {
       document.querySelectorAll("[class*='[']").forEach((el) => {
         el.classList.forEach((cls) => {
-          const match = cls.match(/(bg|text|left|right|top|bottom|margin|padding|shadow|bdr-color|bdr-radius)-\[(.+)\]/);
+          const match = cls.match(/(bg|text|left|right|top|bottom|margin|mt|mr|mb|ml|padding|shadow|bdr-color|bdr-radius|bdr-top-width|bdr-top-color|bdr-top-style)-\[(.+)\]/);
           if (match) {
             const [full, prop, value] = match;
 
@@ -20,10 +20,17 @@ const useDynamicStyles = () => {
               top: "top",
               bottom: "bottom",
               margin: "margin",
+              mt: "marginTop",
+              mr: "marginRight",
+              mb: "marginBottom",
+              ml: "marginLeft",
               padding: "padding",
               shadow: "boxShadow",
               "bdr-color": "borderColor",
+              "bdr-top-color": "borderTopColor",
+              "bdr-top-style": "borderTopStyle",
               "bdr-radius": "borderRadius", // Border-radius support
+              "bdr-top-width": "borderTopWidth", // Border top width support
             }[prop];
 
             if (cssProp) {
